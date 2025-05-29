@@ -31,5 +31,16 @@ def sum_two(a: int, b: int) -> int:
     return a + b
 
 
-print(sum_two(b=1, a=2))  # >>> 3
-print(sum_two(1, 2.4))  # >>> TypeError
+try:
+    print(f"Result: {sum_two(b=1, a=2)}")
+except TypeError:
+    print("Test failed")
+else:
+    print("Test passed")
+
+try:
+    print(f"Result: {sum_two(1, 2.4)}")
+except TypeError:
+    print("Test passed")
+else:
+    print("Test failed")
